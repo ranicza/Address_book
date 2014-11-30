@@ -1,0 +1,103 @@
+<html>
+<head>
+    <title>Address book</title>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <meta charset="utf-8">
+    <script src="js/jquery-2.1.1.js"></script>
+    <script src="js/scripts.js"></script>
+</head>
+<body>
+<div class="container">
+    <h1> Address book</h1>
+    <div class = 'row'>
+       <div class = "col-md-6 col-xs-6">
+           <h2>Add a contact</h2>
+           <form id = 'new-contact'>
+               <div class ='form-group'>
+                   <label for = 'new-first-name'>First name</label>
+                   <input type = 'text' class="form-control" id ='new-first-name'>
+               </div>
+
+               <div class ='form-group'>
+                   <label for = 'new-last-name'>Last name</label>
+                   <input type = 'text' class="form-control" id ='new-last-name'>
+               </div>
+
+               <div id="new-addresses">
+                   <div class="new-address">
+                       <div class="form-group">
+                           <label for="new_street">Street</label>
+                           <input type="text" class="form-control" id="new_street">
+                       </div>
+                       <div class="form-group">
+                           <label for="new_city">City</label>
+                           <input type="text" class="form-control" id="new_city">
+                       </div>
+                       <div class="form-group">
+                           <label for="new_state">State</label>
+                           <input type="text" class="form-control" id = "new_state">
+                       </div>
+                   </div>
+               </div>
+
+               <div id="new-phone-numbers">
+                   <div class="new-phones">
+                       <div class="form-group">
+                           <label for="new_phone">Phone number</label>
+                           <input type="text" class="form-control" id = "new_phone">
+                       </div>
+                   </div>
+               </div>
+
+               <div id="new-emails">
+                   <div class="new-mail">
+                       <div class="form-group">
+                           <label for="new_email">Email</label>
+                           <input type="text" class="form-control" id ="new_email">
+                       </div>
+                   </div>
+               </div>
+               <div class="buttons">
+                   <span class="btn btn-primary" id="add-address">Another address</span>
+                   <span class="btn btn-primary" id="add-phone-number">Another phone</span>
+                   <span class="btn btn-primary" id="add-email">Another email</span>
+               </div>
+
+                <div class="button-add">
+                    <button type="submit" class="btn">Add contact</button>
+                </div>
+
+           </form>
+           <h2>Contacts</h2>
+           <ul id="contacts">
+
+           </ul>
+       </div>
+
+        <div class="col-md-6 col-xs-6">
+            <div id="show-contact">
+                <h2></h2>
+
+                <p>First name: <span class="first-name"></span></p>
+                <p>Last name: <span class="last-name"></span></p>
+                <p>Addresses:</p>
+                <ul id="addresses">
+
+                </ul>
+                <p>Phones:</p>
+                <ul id="phones_num">
+
+                </ul>
+                <p>Emails:</p>
+                <ul id="emails">
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
+
