@@ -8,14 +8,22 @@ function on(eventName, callback){
         }
         callback();
     }
-
 };
 
 function trigger(eventName){
-    callbacks[eventName]();
+    if(callbacks[eventName]){
+        callbacks[eventName]();
+    }
+}
+
+function end(eventName) {
+    if (callbacks[eventName]) {
+        delete callbacks[eventName];
+    }
 }
 
 module.exports = {
     on: on,
-    trigger: trigger
-}
+    trigger: trigger,
+    end: end
+};
